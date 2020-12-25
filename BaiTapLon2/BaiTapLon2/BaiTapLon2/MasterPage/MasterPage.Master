@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BaiTapLon2.MasterPage.MasterPage" %>
+
+<%@ Register Src="../UserConTrol/banner.ascx" TagName="banner" TagPrefix="uc1" %>
+<%@ Register Src="../UserConTrol/ChuDeSach.ascx" TagName="ChuDeSach" TagPrefix="uc3" %>
+<%@ Register src="../UserConTrol/SachMoi.ascx" tagname="SachMoi" tagprefix="uc4" %>
+<%@ Register src="../UserConTrol/main.ascx" tagname="main" tagprefix="uc5" %>
+
+<%@ Register src="../UserConTrol/menungang.ascx" tagname="menungang" tagprefix="uc2" %>
+<%@ Register src="../UserConTrol/GioHang.ascx" tagname="GioHang" tagprefix="uc6" %>
+<%@ Register src="../UserConTrol/QuangCao2.ascx" tagname="QuangCao2" tagprefix="uc7" %>
+<%@ Register src="../UserConTrol/SachBanChay.ascx" tagname="SachBanChay" tagprefix="uc8" %>
+<%@ Register src="../UserConTrol/QuangCao1.ascx" tagname="QuangCao1" tagprefix="uc9" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Style/menu.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 950px;            
+        }
+
+        .auto-style2 {
+            width: 355px;
+        }
+        .auto-style3 {
+            font-size: small;
+        }
+        .auto-style4 {
+            text-align: center;
+            width: 950px;
+            height: 50px;
+        }
+        .auto-style5 {
+            width: 11px;
+        }
+        .auto-style6 {
+            width: 355px;
+            height: 107px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <table class="auto-style1">
+            <tr>
+                <td colspan="3">
+                    <uc1:banner ID="banner1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                   
+                    <uc2:menungang ID="menungang1" runat="server" />
+                   
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4" class="auto-style5" style="vertical-align: top; background-color: #66CCFF;">
+                    <uc3:ChuDeSach ID="ChuDeSach1" runat="server" />
+                </td>
+                <td class="auto-style2" style="width: 610px">
+                    <uc4:SachMoi ID="SachMoi1" runat="server" />
+                </td>
+                <td rowspan="2" style="width: 170px; vertical-align: top; table-layout: auto;">
+                    <uc6:GioHang ID="GioHang1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style6">
+                    <br />
+                    <br />
+                    <uc9:QuangCao1 ID="QuangCao11" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" rowspan="2">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+                <td style="width: 170px; vertical-align: top;">
+                    <uc7:QuangCao2 ID="QuangCao21" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 170px; vertical-align: top;">
+                    <uc8:SachBanChay ID="SachBanChay1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background-color: #1EB884; font-family: 'Times New Roman', Times, serif; color: #FFFFFF;" class="auto-style4"><span class="auto-style3">©2020 - Nhà trường Đại học Công Nghiệp Việt-Hung</span><br class="auto-style3" />
+                    <span class="auto-style3" style="vertical-align: top; background-color: #1EB884;">Địa chỉ: 16 Xuân Khanh, Sơn Tây, Hà Nội</span><br class="auto-style3" />
+                    <span class="auto-style3">ĐT: 0981415813</span></td>
+            </tr>
+        </table>
+        <p>
+            &nbsp;</p>
+    </form>
+</body>
+</html>

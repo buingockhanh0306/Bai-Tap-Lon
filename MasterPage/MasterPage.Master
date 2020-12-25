@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BaiTapLon2.MasterPage.MasterPage" %>
+
+<%@ Register src="../UserConTrol/banner.ascx" tagname="banner" tagprefix="uc1" %>
+<%@ Register src="../UserConTrol/menungang.ascx" tagname="menungang" tagprefix="uc2" %>
+
+<%@ Register src="../UserConTrol/ChuDeSach.ascx" tagname="ChuDeSach" tagprefix="uc3" %>
+<%@ Register src="../UserConTrol/SachMoi.ascx" tagname="SachMoi" tagprefix="uc4" %>
+<%@ Register src="../UserConTrol/QuangCao1.ascx" tagname="QuangCao1" tagprefix="uc5" %>
+<%@ Register src="../UserConTrol/GioHang.ascx" tagname="GioHang" tagprefix="uc6" %>
+<%@ Register src="../UserConTrol/QuangCao2.ascx" tagname="QuangCao2" tagprefix="uc7" %>
+<%@ Register src="../UserConTrol/SachBanChay.ascx" tagname="SachBanChay" tagprefix="uc8" %>
+
+<%@ Register src="../UserConTrol/Footer.ascx" tagname="Footer" tagprefix="uc9" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 950px;
+        }
+        .auto-style2 {
+            width: 610px;
+        }
+        .auto-style3 {
+            width: 170px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <uc1:banner ID="banner1" runat="server" />
+        </div>
+        <table class="auto-style1">
+            <tr>
+                <td colspan="3" style="width: 950px">
+                    <uc2:menungang ID="menungang1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3" style="width: 170px; vertical-align: top; background-color: #66CCFF;">
+                    <uc3:ChuDeSach ID="ChuDeSach1" runat="server" />
+                </td>
+                <td style="width: 610px;" class="auto-style2">
+                    <uc4:SachMoi ID="SachMoi1" runat="server" />
+                </td>
+                <td rowspan="2" style="vertical-align: top; width: 170px;" class="auto-style3">
+                    <uc6:GioHang ID="GioHang1" runat="server" />
+                    <br />
+                    <uc7:QuangCao2 ID="QuangCao21" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" style="width: 610px">
+                    <uc5:QuangCao1 ID="QuangCao11" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" style="width: 610px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style3">
+                    <uc8:SachBanChay ID="SachBanChay1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <uc9:Footer ID="Footer1" runat="server" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

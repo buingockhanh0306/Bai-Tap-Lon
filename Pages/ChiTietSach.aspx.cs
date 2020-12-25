@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace BaiTapLon2.Pages
+{
+    public partial class ChiTietSach : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {          
+            Session["masach"] = ViewState["Ms"];           
+            Response.Redirect("Login.aspx");
+        }
+    }
+}
